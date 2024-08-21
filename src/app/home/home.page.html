@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="pink">
+    <ion-title color="dark-brown">
+      Component
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar></ion-searchbar>
+  <ion-segment value="all" color="pink">
+    <ion-segment-button value="all">
+      <ion-label>SELECT</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="favorites">
+      <ion-label>TOOGGLE</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="Fruit" interface="popover" placeholder="Select fruit" color="pink">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-toggle [enableOnOffLabels]="true" color="pink">กดแล้วต้องได้เกรด 4 นะ</ion-toggle>
+  </ion-item>
+
+  <ion-button expand="block" (click)="presentToast('bottom')" color="pink">จิ้มๆๆๆๆๆ</ion-button>
+</ion-content>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button color="pink">
+    <ion-icon name="sunny-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button color="purple">
+      <ion-icon name="heart-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="blue">
+      <ion-icon name="star-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="yellow">
+      <ion-icon name="moon-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
